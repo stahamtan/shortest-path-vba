@@ -105,8 +105,9 @@ End Function
 Sub testDrive()
     Dim aGraph As New Graph
     
-    '!!!!! Comment out the following line, if not reading the graph from a database table
+    '!!!!! Comment out the following two lines, if not reading the graph from a database table
     Set aGraph = getGraph()
+    Debug.Print Dijkstra(aGraph, aGraph.getNode("N1"), aGraph.getNode("N7"))
     
     '!!!!! Uncomment the following lines if not reading the graph from a database table
 '    aGraph.addNode ("A")
@@ -125,8 +126,8 @@ Sub testDrive()
 '    aGraph.addEdge "C", "E", 5
 '    aGraph.addEdge "C", "D", 4
 '    aGraph.addEdge "D", "E", 1
-    
-    Debug.Print Dijkstra(aGraph, aGraph.getNode("A"), aGraph.getNode("F"))
+
+'    Debug.Print Dijkstra(aGraph, aGraph.getNode("A"), aGraph.getNode("F"))
     
     
 End Sub
